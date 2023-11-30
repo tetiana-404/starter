@@ -1,23 +1,33 @@
+import React from 'react';
 import logo from './logo.svg';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
+import CurrencyConverter2 from './Components/CurrencyConverter2';
+import CurrencyTable from './Components/CurrencyTable';
+
+
+
 function App() {
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <div className=" container">
+          <img src={logo} className="App-logo" alt="logo" />
+          Logo text.
+        </div>
       </header>
+      <main className=" container mt-4 mb-4">
+        <CurrencyTable />
+        
+        <CurrencyConverter2 />
+      </main>
+      
+      <footer className="bg-dark text-light py-3 text-center">
+            <p>&copy; {new Date().getFullYear()} All rights reserved</p>
+        </footer>
     </div>
   );
 }
